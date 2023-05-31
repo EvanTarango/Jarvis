@@ -93,7 +93,7 @@
         //math solving//
         else if (/^([Ww]hat is\s+|[Ss]olve\s+)?[-+*/.\d\s()]+$/.test(userMessage)){
            try{
-                var problem = userMessage.toLowerCase().replace(/(what is|solve)/g, "").trim();
+                var problem = userMessage.replace(/([Ww]hat is|[Ss]olve)/g, "").trim();
                 var result = eval(problem);
                 botMessage = "The solution is: " + result; 
             } catch (error) {
