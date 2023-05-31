@@ -92,15 +92,14 @@
         }     
         //math solving//
         else if (/^([Ww]hat is\s+|[Ss]olve\s+)?[-+*/.\d\s()]+$/.test(userMessage)){
-           try{
-                var problem = userMessage.replace(/([Ww]hat is|[Ss]olve)/g, "").trim();
-                var result = eval(problem);
-                botMessage = "The solution is: " + result; 
-            } catch (error) {
-                botMessage = "Sorry, I couldn't solve that math problem.";
-            }
-            
-        }  else {
+   try {
+      var problem = userMessage.replace(/([Ww]hat is|[Ss]olve)/gi, "").trim();
+      var result = eval(problem);
+      botMessage = "The solution is: " + result; 
+   } catch (error) {
+      botMessage = "Sorry, I couldn't solve that math problem.";
+   }
+} else {
           botMessage = "I'm sorry, I don't understand. Can you please rephrase?";
         }
         addMessage(botMessage, "bot");
