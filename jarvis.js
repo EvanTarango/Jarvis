@@ -94,14 +94,14 @@
             botMessage = "There are too many to choose from!"; 
         }     
         //math solving//
-        else if (/^([Ww]hats is\s+|[Ss]olve\s+)?[-+*/.\d\s()]+$/.test(userMessage)){
-   try {
-      var problem = userMessage.replace(/([Ww]hats is|[Ss]olve)/gi, "").trim();
-      var result = eval(problem);
-      botMessage = "The solution is: " + result; 
-   } catch (error) {
-      botMessage = "Sorry, I couldn't solve that math problem.";
-   }
+    else if (/^(?:[Ww][Hh][Aa][Tt]'?[Ss]?|[Ww][Hh][Aa][Tt]\s+is\s+)?[-+*/.\d\s()]+$/.test(userMessage)) {
+  try {
+    var problem = userMessage.replace(/^(?:[Ww][Hh][Aa][Tt]'?[Ss]?|[Ww][Hh][Aa][Tt]\s+is\s+)/i, "").trim();
+    var result = eval(problem);
+    botMessage = "The solution is: " + result;
+  } catch (error) {
+    botMessage = "Sorry, I couldn't solve that math problem.";
+  }
 } else {
           botMessage = "I'm sorry, I don't understand. Can you please rephrase?";
         }
