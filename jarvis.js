@@ -91,7 +91,7 @@
             botMessage = "There are too many to choose from!"; 
         }     
         //math solving//
-        else if (/^(what is\s+|solve\s+)?[-+*/.\d\s()]+$/.test(userMessage)){
+        else if (/^([Ww]hat is\s+|[Ss]olve\s+)?[-+*/.\d\s()]+$/.test(userMessage)){
            try{
                 var problem = userMessage.toLowerCase().replace(/(what is|solve)/g, "").trim();
                 var result = eval(problem);
