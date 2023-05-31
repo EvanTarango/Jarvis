@@ -69,6 +69,9 @@
         else if (userMessage.toLowerCase().includes("help"))   {
             botMessage = "Please tell me how I can help you"; 
         }     
+          else if (userMessage.toLowerCase().includes("how old are you"))   {
+            botMessage = "I am not living so I don't have an age"; 
+        } 
         
         //favorites// 
         
