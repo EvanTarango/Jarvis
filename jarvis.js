@@ -94,9 +94,9 @@
             botMessage = "There are too many to choose from!"; 
         }     
         //math solving//
-        else if (/^([Ww]hat is\s+|[Ss]olve\s+)?[-+*/.\d\s()]+$/.test(userMessage)){
+        else if (/^([Ww]hats is\s+|[Ss]olve\s+)?[-+*/.\d\s()]+$/.test(userMessage)){
    try {
-      var problem = userMessage.replace(/([Ww]hat is|[Ss]olve)/gi, "").trim();
+      var problem = userMessage.replace(/([Ww]hats is|[Ss]olve)/gi, "").trim();
       var result = eval(problem);
       botMessage = "The solution is: " + result; 
    } catch (error) {
