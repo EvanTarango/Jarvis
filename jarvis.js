@@ -94,9 +94,9 @@
             botMessage = "There are too many to choose from!"; 
         }     
         //math solving//
-    else if (/^(?:[Ww][Hh][Aa][Tt]'?[Ss]?|[Ww][Hh][Aa][Tt]\s+is\s+)?[-+*/.\d\s()]+$/.test(userMessage)) {
+    else if (/^(?:[Ww][Hh][Aa][Tt]'[Ss]?|[Ww][Hh][Aa][Tt]\s+is\s+)?[-+*/.\d\s()]+$/.test(userMessage)) {
   try {
-    var problem = userMessage.replace(/^(?:[Ww][Hh][Aa][Tt]'?[Ss]?|[Ww][Hh][Aa][Tt]\s+is\s+)/i, "").trim();
+    var problem = userMessage.replace(/^(?:[Ww][Hh][Aa][Tt]'[Ss]?|[Ww][Hh][Aa][Tt]\s+is\s+)/i, "").trim();
     var result = eval(problem);
     botMessage = "The solution is: " + result;
   } catch (error) {
