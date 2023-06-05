@@ -35,7 +35,9 @@
           botMessage = "Hello! How can I assist you?";
         } else if (userMessage.toLowerCase().includes("hi")) {
           botMessage = "Hello! How can I assist you?";
-        } else if (userMessage.toLowerCase().includes("how are you")) {
+        } else if (userMessage.toLowerCase().includes("hey")) {
+           botMessage = "Hey is for horses, try something else" 
+        }else if (userMessage.toLowerCase().includes("how are you")) {
           botMessage = "I am doing great, and you?";
         } else if (userMessage.toLowerCase().includes("good")) {
           botMessage = "That is great! Do you have any questions for me?";
